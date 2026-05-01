@@ -28,26 +28,6 @@ cp .env.example .env
 python -m cipherbot.main
 ```
 
-## Docker
-
-```bash
-docker build -t cipherbot .
-docker run --env-file .env -v "$PWD:/app" cipherbot
-```
-
-## Callback-data
-
-Формат соответствует `section:action:value`.
-
-Примеры:
-
-- `encrypt:select:caesar`
-- `decrypt:select:xor`
-- `history:open:15`
-- `history:delete:15`
-- `export:format:json`
-- `genkey:type:mixed`
-
 ## PolyCitrus
 
 PolyCitrus работает с Unicode scalar values, поэтому поддерживает разные языки, смешанный текст и эмодзи.
